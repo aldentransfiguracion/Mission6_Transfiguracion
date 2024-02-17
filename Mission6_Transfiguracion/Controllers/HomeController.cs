@@ -39,24 +39,15 @@ namespace Mission6_Transfiguracion.Controllers
             {
                 response.Notes = "";
             }
+
             if (response.Category == null)
             {
                 response.Category = "";
             }
-            if (response.Title == null)
-            {
-                response.Title = "";
-            }
-            if (response.Director == null)
-            {
-                response.Director = "";
-            }
-            if (response.Rating == null)
-            {
-                response.Rating = "";
-            }
-            _context.AddMovie.Add(response);
-            _context.SaveChanges();
+
+            //Ask Hilton
+            //_context.AddMovie.Add(response);
+            //_context.SaveChanges();
             return View("Confirmation");
         }
     }
