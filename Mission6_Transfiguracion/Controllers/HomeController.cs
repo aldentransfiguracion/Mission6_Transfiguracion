@@ -30,25 +30,9 @@ namespace Mission6_Transfiguracion.Controllers
         [HttpPost]
         public IActionResult AddMovie(AddMovie response)
         {
-            if (response.LentTo == null)
-            {
-                response.LentTo = "";
-            }
-
-            if (response.Notes == null)
-            {
-                response.Notes = "";
-            }
-
-            if (response.Category == null)
-            {
-                response.Category = "";
-            }
-
-            //Ask Hilton
-            //_context.AddMovie.Add(response);
-            //_context.SaveChanges();
-            return View("Confirmation");
+            _context.AddMovie.Add(response); //Add record to database
+            _context.SaveChanges();
+            return View("Confirmation", response);
         }
     }
 }

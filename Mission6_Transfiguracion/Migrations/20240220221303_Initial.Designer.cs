@@ -10,8 +10,8 @@ using Mission6_Transfiguracion.Models;
 namespace Mission6_Transfiguracion.Migrations
 {
     [DbContext(typeof(AddMovieContext))]
-    [Migration("20240217075942_Initial3")]
-    partial class Initial3
+    [Migration("20240220221303_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
